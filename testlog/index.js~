@@ -1,0 +1,3 @@
+var winston = require('winston');
+winston.log('info', 'Teste 123');
+winston.info('essa eh uma msg de info');
