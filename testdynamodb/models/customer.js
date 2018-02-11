@@ -7,8 +7,14 @@ var customerSchema = new dynamoose.Schema({
         type: Number,
         hashKey: true
     },
-    name: String
-}, { create: true });
+    name: {
+        type: String,
+        required: true,
+        
+    }
+}, {
+    timestamps: true
+});
 
 var Customer = dynamoose.model('Customer', customerSchema);
 
